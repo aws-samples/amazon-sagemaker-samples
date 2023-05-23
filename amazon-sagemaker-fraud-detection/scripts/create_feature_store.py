@@ -211,10 +211,10 @@ if "customers_table" not in locals():
     ]
 
 claims_feature_group_s3_prefix = (
-    f"{prefix}/{account_id}/sagemaker/{region}/offline-store/{claims_table}/data"
+    f"{prefix}/{account_id}/sagemaker/{region}/offline-store/{claims_table.replace('_','-')}/data"
 )
 customers_feature_group_s3_prefix = (
-    f"{prefix}/{account_id}/sagemaker/{region}/offline-store/{customers_table}/data"
+    f"{prefix}/{account_id}/sagemaker/{region}/offline-store/{customers_table.replace('_','-')}/data"
 )
 
 print(claims_feature_group_s3_prefix)
